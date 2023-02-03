@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    {{>header}}
+    {{#if errors}}
+    <section class="errors">
+        <ul>
+        {{#each errors}}
+            <li>{{this.msg}}</li>
+        {{/each}}
+        </ul>
+    </section>
+    {{/if}}
+    <form action="/customer/add" method="post">
+        <input name="name" value="" placeholder="Name">
+        <input name="email" value="" placeholder="Email">
+        <input type="submit" name=""save>
+    </form>
+</body>
+</html>
